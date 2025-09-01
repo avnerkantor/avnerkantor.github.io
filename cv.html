@@ -1,538 +1,291 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-
-
-<title>AVNER KANTOR | CURRICULUM VITAE</title>
-
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avner Kantor | Curriculum Vitae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#ffffff;
+    --fg:#111111;
+    --muted:#555;
+    --accent:#000000;
+    --line:#e6e6e6;
   }
-}
-</script>
-
-
-
-
-
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-pre code {
-  padding: 0;
-}
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap: 12px 24px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--line);
+  }
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--muted); font-weight: 600; margin-top: 2px; }
+  .meta { font-size: 14px; color: var(--muted); }
+  section { padding: 26px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  h2 {
+    font-size: 20px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px 0;
+  }
+  .two-col {
+    display:grid;
+    grid-template-columns: 160px 1fr;
+    gap: 10px 24px;
+  }
+  .role { font-weight:600; }
+  .where { color: var(--muted); }
+  ul { margin: 8px 0 0 18px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .list-tight li { margin: 2px 0; }
+  .skill-groups { display:grid; grid-template-columns: 1fr 1fr; gap: 12px 36px; }
+  .skill-groups p { margin: 4px 0; }
+  .ref-block p { margin: 3px 0; }
+  .work-exp > div { margin-bottom: 18px; }
+  .pill {
+    display:inline-block; padding:2px 8px; border:1px solid var(--line);
+    border-radius:999px; font-size:12px; color:var(--muted);
+    margin-left: 8px;
+  }
+  @media (max-width: 720px) {
+    .two-col { grid-template-columns: 1fr; }
+    header { align-items:flex-start; }
+    .skill-groups { grid-template-columns: 1fr; }
+  }
 </style>
-
-
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
 </head>
-
 <body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Avner Kantor</h1>
+        <div class="subtitle">Curriculum Vitae</div>
+      </div>
+      <div class="meta">
+        Updated September 01, 2025
+      </div>
+    </header>
 
+    <section>
+      <h2>Profile</h2>
+      <p>
+        Data scientist and researcher specializing in <strong>data journalism, social network analysis, and time series forecasting</strong>.
+        Experienced in both academic and applied settings, bridging <em>computational social science, data visualization, and statistical modeling</em> to generate insights in healthcare, education, and digital democracy.
+      </p>
+    </section>
 
-<div class="container-fluid main-container">
+    <section>
+      <div class="two-col">
+        <div><strong>Affiliation</strong></div>
+        <div>School of Management, University of Haifa, Israel</div>
 
+        <div><strong>Contact</strong></div>
+        <div>
+          Email: <a href="mailto:avnerkantor@gmail.com">avnerkantor@gmail.com</a> ·
+          Website: <a href="http://avnerkantor.com" target="_blank" rel="noopener">avnerkantor.com</a>
+        </div>
 
+        <div><strong>Research Interests</strong></div>
+        <div>Data journalism, data visualization, computational social science, social network analysis, and deliberation and rationality in online discourse.</div>
+      </div>
+    </section>
 
+    <section>
+      <h2>Education</h2>
+      <div class="two-col">
+        <div>2024</div>
+        <div>
+          <span class="role">PhD, Information &amp; Knowledge Management</span> — University of Haifa<br>
+          Advisor: Prof. Sheizaf Rafaeli<br>
+          Dissertation (Article-Based): <em>Online Deliberation and Data Journalism</em>
+        </div>
 
-<div id="header">
+        <div>2015</div>
+        <div><span class="role">MA, Philosophy</span> — Hebrew University of Jerusalem</div>
 
+        <div>2010</div>
+        <div><span class="role">B.A., Philosophy</span> — Hebrew University of Jerusalem</div>
+      </div>
+    </section>
 
+    <section>
+      <h2>Academic Positions</h2>
+      <div class="two-col">
+        <div>2021–2022</div>
+        <div>
+          <span class="role">Adjunct Lecturer</span> — Lauder School of Government, Diplomacy, and Strategy, Reichman University<br>
+          Taught <em>Introduction to Data Science with Python</em> for Government.
+        </div>
 
-<h1 class="title toc-ignore">AVNER KANTOR | CURRICULUM VITAE</h1>
+        <div>2015–2018</div>
+        <div>
+          <span class="role">Research Fellow</span> — The Center for Internet Research, University of Haifa<br>
+          Designed and launched <em>OpenPISA</em>, a platform for analyzing and presenting educational data.
+        </div>
 
-</div>
+        <div>2010–2011</div>
+        <div>
+          <span class="role">Project Initiator &amp; Coordinator</span> — The Hebrew University of Jerusalem<br>
+          Led an Israeli–German collaboration between the Hebrew University and the Universities of Karlsruhe and Regensburg.
+        </div>
+      </div>
+    </section>
 
+    <section>
+      <h2>Manuscripts Under Review</h2>
+      <ul class="list-tight">
+        <li>Kantor, A., &amp; Rafaeli, S. <em>Information accessibility and network structure: How data journalism shapes deliberation</em>. (Under review, <em>Journalism</em>.)</li>
+        <li>Kantor, A., &amp; Rafaeli, S. <em>From data journalism to rationality: A content analysis of audience response in The New York Times</em>. (Revise &amp; Resubmit, <em>Journalism Studies</em>.)</li>
+      </ul>
+    </section>
 
-<p><a href="index.html">&lt; home</a></p>
-<p>September 19, 2021</p>
-<!--
-CONTACT INFORMATION
-: Phone: +972-54-7820-256
-: E-mail: avnerkantor@gmail.com
-: Website: [avnerkantor.com](http://avnerkantor.com)
+    <section>
+      <h2>Papers in Refereed Conference Proceedings</h2>
+      <ul>
+        <li>(2025, forthcoming) Kantor, A., &amp; Rafaeli, S. <em>Data, sense, and sensibility: How data journalism style shapes interactivity</em>. Selected Papers of Internet Research (AoIR), Niterói, Brazil.</li>
+        <li>(2025) Kantor, A., &amp; Rafaeli, S. <em>Conversations with data: How data journalism affects online comments in the New York Times</em>. Proceedings of the 58th Hawaii International Conference on System Sciences (HICSS), Waikoloa, USA.</li>
+        <li>(2021) Kantor, A., &amp; Rafaeli, S. <em>Independence through data journalism</em>. Selected Papers of Internet Research (AoIR), Virtual Event. <a href="https://youtu.be/example2021" target="_blank"><span class="pill">Video</span></a></li>
+        <li>(2020) Kantor, A., &amp; Rafaeli, S. <em>Open PISA: Dashboard for large educational dataset</em>. Proceedings of the Seventh ACM Conference on Learning@Scale, Virtual Event. <a href="https://youtu.be/example2020" target="_blank"><span class="pill">Video</span></a></li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>Refereed Conference Presentations</h2>
+      <ul>
+        <li>(2025) <em>A hybrid analytical framework for studying network mechanisms</em>. Sunbelt International Conference on Social Network Analysis, Paris, France, June 23–29. <span class="pill">Accepted; not presented</span></li>
+        <li>(2022) <em>Engagement with visualizations in The New York Times</em>. The Israeli Visualization Conference, Shenkar College, Ramat Gan, Israel, May 12.</li>
+        <li>(2020) <em>Does data journalism engage its audience?</em> Computation + Journalism Symposium, Virtual Event, USA, March 20–21.</li>
+        <li>(2017) <em>Big data and citizen empowerment</em>. Public Policy and Politics in the Age of Media and Data, Open University of Israel, Ra’anana, Israel, December 24.</li>
+        <li>(2017) <em>Education data journalism</em>. The Israeli Visualization Conference, University of Haifa, Haifa, June 27.</li>
+      </ul>
+    </section>
 
-RESEARCH INTERESTS
-: I am primarily interested in the empirical and theoretical analysis of deliberation. I am particularly interested in the mechanisms underlying data literacy and the factors contributing to quality discourse. 
--->
-<table>
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>EDUCATION</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2020-2024</td>
-<td>Ph.D. student, School of business administration, University of Haifa.<br/> Advisor: <a href="https://sites.google.com/rafaeli.net/sheizaf">Prof. Sheizaf Rafaeli</a>.<br/>Thesis Topic: <em>Data Journalism and Online Deliberation</em></td>
-</tr>
-<tr class="even">
-<td>2019</td>
-<td>Master’s research and thesis, Information &amp; Knowledge Management, University of Haifa.<br/> Advisor: Prof. Sheizaf Rafaeli.<br/>Thesis Topic: <em>Data Journalism, Transparency and Interactivity</em></td>
-</tr>
-<tr class="odd">
-<td>2015</td>
-<td>MA, Philosophy Education, Hebrew University of Jerusalem</td>
-</tr>
-<tr class="even">
-<td>2010</td>
-<td>Teacher Certification program, Hebrew University of Jerusalem</td>
-</tr>
-<tr class="odd">
-<td>2010</td>
-<td>B.A., Philosophy and Interdisciplinary program, Hebrew University of Jerusalem</td>
-</tr>
-</tbody>
-</table>
-<!-- 1994-1997| Israel Arts and Science Academy|-->
-<table>
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>CONFERENCES</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2021</td>
-<td>Kantor, Avner, and Sheizaf Rafaeli. <a href="https://doi.org/10.5210/spir.v2021i0.12191">“Independence through Data Journalism”</a>(<a href="https://www.youtube.com/watch?v=PbV4Ee6UDbo">video</a>). The 22nd Annual Conference of the Association of Internet Researchers.Virtual Event, 12 - 16 October, 2021</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>“Does Data Journalism Engage Its Audience?”, Computation + Journalism Symposium, Virtual Event, USA, March 20 – 21, 2020</td>
-</tr>
-<tr class="odd">
-<td>2020</td>
-<td><a href="https://dl.acm.org/doi/abs/10.1145/3386527.3406721">“Open PISA: Dashboard for Large Educational Dataset”</a>(<a href="https://www.youtube.com/watch?v=1ZcaSSY-5ag">video</a>), Learning at Scale, Virtual Event, USA, August 12–14, 2020</td>
-</tr>
-<tr class="even">
-<td>2017</td>
-<td><a href="https://www.youtube.com/watch?v=U_-jka7O8H4">“Big Data and Citizen Empowerment”</a>, Public Policy and Politics in The Age of Media and Data, Open University of Israel, Ra’anana, December 24, 2017</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>“Transparency and Interactivity: Does Data Journalism Effects Civic Engagement”, Rabin Graduate Conference on Political Science, International Relations, and Public Policy, Hebrew University of Jerusalem, Jerusalem, December 13-14, 2017</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a href="https://www.youtube.com/watch?v=1ZcaSSY-5ag">“Education Data Journalism”</a>, The Israeli Visualization Conference (ISVIS), Haifa University, Haifa, June 27, 2017</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>“How can the public be encouraged to investigate educational questions? The PISA Citizen Science Project”, Public Engagement with Science Online – A Research Workshop of the Israel Science Foundation, Technion, Haifa, June 25t, 2017</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>“Big Data and Education: PISA Test”, INFO Annual Conference &amp; Exhibition - Teldan Information Systems, Tel-Aviv, May 11, 2017</td>
-</tr>
-<tr class="odd">
-<td>2015</td>
-<td>“PISA Data Explorer”, Learning in a Networked Society (LINKS) Annual Retreat, Ben Gurion University, Beer-Sheva, September 8-9, 2015</td>
-</tr>
-<tr class="even">
-<td>2014</td>
-<td>“Education Data Transparency”, Learning in a Networked Society (LINKS) Annual Retreat, Haifa University, September 18, 2014</td>
-</tr>
-<tr class="odd">
-<td>2009</td>
-<td>“Philosophy for Children and Bilingual Education”, IPCRI Education for Peace Conference &amp; Workshops, Tantur, Jerusalem, Apr 24-25, 2009</td>
-</tr>
-<tr class="even">
-<td>2007</td>
-<td>“Meaning of Life and Education”, International Council of Philosophical Inquiry with Children, Hebrew University of Jerusalem, Jerusalem, June 4-7, 2007</td>
-</tr>
-</tbody>
-</table>
-<table>
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>SEMINARS</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2017</td>
-<td>“Data Journalism and Education”, Faculty of Education Science and Technology, Technion, November 14, 2017</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>“Education Data Journalism”, <a href="http://www.openu.ac.il/en/omilab/pages/default.aspx">Open Media and Information Lab</a>, Open University of Israel, Ra’anana, February 22, 2017</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>“Open PISA Project”, Education Seminar, Israel Central Bureau of Statistics, Jerusalem, February 22, 2017</td>
-</tr>
-<tr class="even">
-<td>2016</td>
-<td>“Open PISA Project”, National Authority for Measurement and Evaluation in Education, Ramat-Gan, December 28, 2016</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>“Visualization of Education”, Education Seminar, Israel Central Bureau of Statistics, Jerusalem, Januar 21, 2016</td>
-</tr>
-<tr class="even">
-<td>2015</td>
-<td>“Data Journalism”, Special Seminar for World Statistics Day, Israel Central Bureau of Statistics, Jerusalem, October 22, 2015</td>
-</tr>
-</tbody>
-</table>
-<table>
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>BOOK CHAPTERS</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2013</td>
-<td>Kantor, Avner. <a href="https://books.google.co.il/books?id=MhpLAgAAQBAJ&amp;pg=PA33">“Dream and Hope”</a>. <em>Narrative, Dreams, Imagination</em> 3 (2013): 33.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>SERVICE</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2010</td>
-<td>Workshop: Imaging the Future, Hebrew University of Jerusalem, Jerusalem, 2010</td>
-</tr>
-<tr class="even">
-<td>2015</td>
-<td>Co-organized a competition for improving articles in statistics and probability for the Wikipedia in Hebrew</td>
-</tr>
-<tr class="odd">
-<td>2009</td>
-<td>Workshop: Education for Thinking: Inquiry, Creativity and Philosophy, Israel Center for Excellence through Education, Jerusalem, December 13, 2009</td>
-</tr>
-<tr class="even">
-<td>2007</td>
-<td>Conference: International Council of Philosophical Inquiry with Children, Hebrew University of Jerusalem, Jerusalem, June 4-7, 2007</td>
-</tr>
-</tbody>
-</table>
-<table>
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>TEACHING</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Spring 2021</td>
-<td>“Introduction to Data Science for Government”, <a href="https://www.idc.ac.il/en/schools/government/pages/home.aspx">Lauder School of Government, Diplomacy &amp; Strategy</a> IDC Herzliya</td>
-</tr>
-</tbody>
-</table>
-<table>
-<colgroup>
-<col width="12%" />
-<col width="77%" />
-<col width="10%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>GRANTS</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2018</td>
-<td>Samuel Neaman Institute for <a href="https://avnerkantor.shinyapps.io/israel100/">Israel 100: Wikipedia digital footprint</a> (in collaboration with Prof. Sheizaf Rafaeli)</td>
-<td>20,000 NIS</td>
-</tr>
-<tr class="even">
-<td>2017-2019</td>
-<td><a href="https://allcloud.io/">AllCloud</a> for hosting <a href="http://openpisa.org/">Open PISA Project</a></td>
-<td>11,000$</td>
-</tr>
-<tr class="odd">
-<td>2015-2020</td>
-<td><a href="https://trump.org.il/en/">The Trump Foundation</a> for developing <a href="http://openpisa.org/">Open PISA Project</a> (in collaboration with Prof. Sheizaf Rafaeli)</td>
-<td>400,000 NIS</td>
-</tr>
-<tr class="even">
-<td>2010-2011</td>
-<td>DAAD Center for German Studies in the Hebrew University of Jerusalem for Israeli-German research project (in collaboration with Dr. Jen Glasser)</td>
-<td>10,000$</td>
-</tr>
-<tr class="odd">
-<td>2007</td>
-<td>The Melton Center for Jewish Education in the Hebrew University of Jerusalem for international ICPIC conference (in collaboration with Dr. Jen Glasser)</td>
-<td>10,000$</td>
-</tr>
-<tr class="even">
-<td>2006</td>
-<td>The School of Education in the Hebrew University of Jerusalem for Philosophy in Primary Schools Project (in collaboration with Dr. Jen Glasser)</td>
-<td>10,000 NIS</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>The Jerusalem Foundation for Philosophy in Primary Schools Project (in collaboration with Dr. Jen Glasser)</td>
-<td>5,000$</td>
-</tr>
-</tbody>
-</table>
-<table>
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>INDUSTRY</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2020- 2021</td>
-<td>Corona National Information and Knowledge Center, Data Scientist</td>
-</tr>
-<tr class="even">
-<td>2018-2020</td>
-<td><a href="https://home.cet.ac.il/?lang=en">The Center for Educational Technology</a>, Data Scientist</td>
-</tr>
-<tr class="odd">
-<td>2015-2017</td>
-<td><a href="https://internetcenter.haifa.ac.il/index.php/en/home-english/48-about">The Center for Internet Research</a>, Research Fellow</td>
-</tr>
-<tr class="even">
-<td>2012-2013</td>
-<td><a href="https://finder.startupnationcentral.org/company_page/elenxos">Elenxos</a>, Software Developer</td>
-</tr>
-<tr class="odd">
-<td>2008-2011</td>
-<td>Ministry of Education, Science and Math Teacher</td>
-</tr>
-<tr class="even">
-<td>2004-2008</td>
-<td><a href="http://www.mada.org.il/en">Jerusalem Science Museum</a>, Instructor</td>
-</tr>
-</tbody>
-</table>
-<!--|1997-2001 | Israel Defense Forces, Science Technology Intelligence Analyst |-->
-<dl>
-<dt><strong>REFEREE SERVICE</strong></dt>
-<dd>Hawaii International Conference on System Sciences (HICSS), ACM CHI Conference on Human Factors in Computing Systems, Public Understanding of Science (PUS)
-</dd>
-<dt><br/><strong>Volunteering</strong></dt>
-<dd>Wikipedia, Wikimedia, Open Knowledge Workshop, Association of Engineers in Israel, Israel R User Group.
-</dd>
-<dt><br/><strong>REFERENCE</strong></dt>
-<dd>Prof. Sheizaf Rafaeli (Ph.D. advisor)
-</dd>
-<dd>President of <a href="https://www.shenkar.ac.il/en">Shenkar College of Engineering and Design</a>
-</dd>
-<dd>Email: <a href="mailto:sheizaf@rafaeli.net" class="email">sheizaf@rafaeli.net</a>
-</dd>
-</dl>
+    <section>
+      <h2>Seminars &amp; Invited Talks</h2>
+      <ul>
+        <li>(2024) “Data journalism”. Lecture recorded for Learning Analytics Café (Prof. Ido Roll’s MOOC), Faculty of Education Science and Technology, Technion, July 29.</li>
+        <li>(2017) “Data journalism and education.” Faculty of Education Science and Technology, Technion, November 14.</li>
+        <li>(2017) “How can the public be encouraged to investigate educational questions.” Research Workshop of the Israel Science Foundation, Technion, Haifa, June 25.</li>
+        <li>(2017) “Education data journalism.” Open Media and Information Lab, Open University of Israel, Ra’anana, February 22.</li>
+        <li>(2016) “Open PISA Project.” National Authority for Measurement and Evaluation in Education, Ramat Gan, December 28.</li>
+        <li>(2015) “Data journalism.” Special Seminar for World Statistics Day, Israel Central Bureau of Statistics, Jerusalem, October 22.</li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>Research in Progress</h2>
+      <ul class="list-tight">
+        <li>Automating Visualization Type Classification in Data Journalism Using LLMs</li>
+        <li>Evaluating Rationality in Online Discussions Using LLMs</li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>Research Grants</h2>
+      <ul>
+        <li>Samuel Neaman Institute. <em>Wikipedia digital footprint</em> project (2018). USD $6,000.</li>
+        <li>AllCloud Co. Cloud hosting support for the Open PISA Project (2017). USD $11,000.</li>
+        <li>Trump Family Foundation. Developed the Open PISA Project (2015–2020). USD $120,000.</li>
+        <li>DAAD Center for German Studies. <em>Narrative, Dreams, Imagination</em>: Israeli and German Youth Imagine their Futures (2010–2011). USD $10,000.</li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>Professional Associations &amp; Activities</h2>
+      <ul>
+        <li><strong>Ad-Hoc reviewer:</strong> HICSS, CHI, CSCW, Public Understanding of Science (PUS)</li>
+        <li><strong>Memberships:</strong> International Network for Social Network Analysis (INSNA), Israel Association for Information Systems (ILAIS), Wikimedia Israel</li>
+      </ul>
+    </section>
 
-</div>
+    <section>
+      <h2>Work Experience</h2>
+      <div class="two-col work-exp">
+        <div>2024–present</div>
+        <div><span class="role">Statistician</span> — Central Bureau of Statistics<br>
+        Conducted formal time series analysis for official statistical reporting.</div>
 
-<script>
+        <div>2021–2024</div>
+        <div><span class="role">Data Scientist</span> — Maccabi Health Services<br>
+        Led research on physician burnout prediction, patient wait time forecasting, and healthcare trends analysis using statistical and machine learning methods; produced research papers and reports to support decision-making and improve patient care.</div>
 
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
+        <div>2020–2021</div>
+        <div><span class="role">Data Scientist</span> — Corona National Information and Knowledge Center<br>
+        Conducted research on vaccine effectiveness and COVID-19 infection patterns in children, delivering data-driven insights to inform national response.</div>
 
+        <div>2018–2020</div>
+        <div><span class="role">Data Scientist</span> — Center for Educational Technology<br>
+        Developed adaptive learning systems by integrating psychometric modeling and machine learning.</div>
+      </div>
+    </section>
 
-</script>
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skill-groups">
+        <div>
+          <p><strong>Core Competencies</strong></p>
+          <p>Python, R, SQL, pandas, tidyverse</p>
+          <p>Statistical Modeling &amp; ML: scikit-learn, caret, Hayes’ PROCESS macro</p>
+          <p>Time Series: Prophet, X-13ARIMA-SEATS, fpp3</p>
+          <p>Network Analysis: NetworkX, igraph</p>
+        </div>
+        <div>
+          <p><strong>Additional Skills</strong></p>
+          <p>Visualization &amp; Dashboards: ggplot2, Plotly, R Shiny</p>
+          <p>Web Scraping &amp; Automation: httr, rvest, Selenium, pyppeteer, Playwright</p>
+          <p>Cloud &amp; Deployment: AWS S3, Heroku, Azure, GCP</p>
+          <p>Databases: SQL Server</p>
+        </div>
+      </div>
+    </section>
 
-<!-- tabsets -->
+    <section>
+      <h2>References</h2>
+      <div class="ref-block">
+        <p><strong>Prof. Sheizaf Rafaeli</strong><br>
+        President, Shenkar College of Engineering; former faculty member, School of Management, University of Haifa.<br>
+        Dissertation Supervisor.<br>
+        Email: <a href="mailto:president.office@shenkar.ac.il">president.office@shenkar.ac.il</a></p>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
+        <p><strong>Prof. Ayelet Baram-Tsabari</strong><br>
+        Head, Science Communication Research Group, Faculty of Education in Science and Technology, Technion – Israel Institute of Technology.<br>
+        Email: <a href="mailto:ayelet@technion.ac.il">ayelet@technion.ac.il</a></p>
+      <p><strong>Prof. Karin Nahon</strong><br>
+        Dean, Sammy Ofer School of Communications, Reichman University.<br>
+        Email: <a href="mailto:knahon@runi.ac.il">knahon@runi.ac.il</a></p>
+      </div>
+    </section>
 
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
+    <footer class="meta" style="padding-top:22px;">
+      For the most recent version, visit <a href="http://avnerkantor.com">avnerkantor.com</a>.
+    </footer>
+  </div>
 </body>
 </html>
