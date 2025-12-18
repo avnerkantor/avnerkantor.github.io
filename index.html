@@ -8,9 +8,6 @@
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-
-
-
 <title>Avner Kantor</title>
 
 <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
@@ -20,15 +17,42 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
+
+<style>
+  h1 {font-size: 34px;}
+  h1.title {font-size: 38px;}
+  h2 {font-size: 30px;}
+  h3 {font-size: 24px;}
+  h4 {font-size: 18px;}
+  h5 {font-size: 16px;}
+  h6 {font-size: 12px;}
+  code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+  pre:not([class]) { background-color: white }
+  
+  /* --- New Custom Styles for Bio --- */
+  .highlight {
+      font-weight: bold;
+      color: #337ab7; /* Matches Bootstrap primary blue */
+  }
+  
+  .fun-fact {
+      background-color: #f9f9f9;
+      border-left: 4px solid #337ab7;
+      padding: 10px 15px;
+      font-style: italic;
+      margin-top: 20px;
+      color: #555;
+      font-size: 16px;
+  }
+  
+  /* Add some breathing room to the bio paragraphs */
+  .bio-text p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      font-size: 16px;
+  }
+</style>
+
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -40,7 +64,7 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-    </style>
+</style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
@@ -52,13 +76,6 @@ if (window.hljs) {
   }
 }
 </script>
-
-
-
-
-
-
-
 
 <style type = "text/css">
 .main-container {
@@ -85,10 +102,6 @@ pre code {
   padding: 0;
 }
 </style>
-
-
-
-<!-- tabsets -->
 
 <style type="text/css">
 .tabset-dropdown > .nav-tabs {
@@ -144,40 +157,30 @@ pre code {
 }
 </style>
 
-<!-- code folding -->
-
-
-
-
 </head>
 
 <body>
 
-
 <div class="container-fluid main-container">
 
-
-
-
 <div id="header">
-
-
-
 <h1 class="title toc-ignore">Avner Kantor</h1>
-
 </div>
 
-
 <div class="columns">
-<div class="column" style="width:40%;">
-<p><img src="mysons1.jpeg" /></p>
-<p><a href="cv.html">CV</a></p>
-<p><a href="https://github.com/avnerkantor">GitHub</a></p>
-<p><a href="https://www.linkedin.com/in/avnerkantor/">Linkedin</a></p>
-<p>avnerkantor at gmail</p>
-</div><div class="column" style="width:10%;">
+  
+  <div class="column" style="width:40%;">
+    <p><img src="mysons1.jpeg" /></p>
+    <p><a href="cv.html">CV</a></p>
+    <p><a href="https://github.com/avnerkantor">GitHub</a></p>
+    <p><a href="https://www.linkedin.com/in/avnerkantor/">Linkedin</a></p>
+    <p>avnerkantor at gmail</p>
+  </div>
 
-</div><div class="column" style="width:50%;">
+  <div class="column" style="width:10%;">
+  </div>
+
+  <div class="column bio-text" style="width:50%;">
 
     <p>
         I am a <span class="highlight">Computational Social Scientist</span> specializing in the intersection of information systems, decision-making, and public policy. I recently completed my PhD at the University of Haifa, where my research focused on how data journalism shapes civic engagement and rationality in online discourse.
@@ -194,22 +197,19 @@ pre code {
 
     <h2>Beyond Research</h2>
     <p>
-        I am a passionate advocate for open knowledge. I created an open-data platform for the OECD’s PISA database to make educational findings accessible to the public. I am also a long-time editor and community member of the Hebrew Wikipedia, believing that accessible knowledge is a key driver for social change. I was even honored to be part of a <a href="https://www.instagram.com/p/CKDtIM3KOOc/?igshid=1rtr7ognpqsam">video for Wikipedia’s 20th birthday</a>.
+        I am a passionate advocate for open knowledge. I created an <a href="#">open-data platform</a> for the OECD’s PISA database to make educational findings accessible to the public. I am also a long-time editor and community member of the Hebrew Wikipedia, believing that accessible knowledge is a key driver for social change. I was even honored to be part of a <a href="https://www.instagram.com/p/CKDtIM3KOOc/?igshid=1rtr7ognpqsam">video for Wikipedia’s 20th birthday</a>.
     </p>
 
     <div class="fun-fact">
         Fun fact: Wikipedia is also where I met my wife!
     </div>
+  
+  </div>
 </div>
-</div>
-
-
-
 
 </div>
 
 <script>
-
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
   $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
@@ -217,11 +217,7 @@ function bootstrapStylePandocTables() {
 $(document).ready(function () {
   bootstrapStylePandocTables();
 });
-
-
 </script>
-
-<!-- tabsets -->
 
 <script>
 $(document).ready(function () {
@@ -235,10 +231,6 @@ $(document).ready(function () {
 });
 </script>
 
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
   (function () {
     var script = document.createElement("script");
