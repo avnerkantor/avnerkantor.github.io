@@ -80,20 +80,25 @@
   }
   .contact-row a:hover { color: var(--navy); text-decoration: none; }
   .contact-row svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
-  .cv-btn {
-    display: inline-block;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.74rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #fff;
-    background: var(--navy);
-    border-radius: 2px;
-    padding: 0.35em 0.9em;
-    transition: opacity 0.15s;
-  }
-  .cv-btn:hover { opacity: 0.82; text-decoration: none; }
+.cv-btn {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: transparent;
+  border: 1px solid var(--navy);
+  border-radius: 2px;
+  padding: 0.35em 0.9em;
+  transition: background 0.15s, color 0.15s;
+}
+.cv-btn:hover {
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+}
   .header-photo { flex-shrink: 0; width: 148px; }
   .header-photo img {
     width: 148px;
@@ -297,10 +302,6 @@
       <a href="mailto:avnerkantor@gmail.com">
         <svg viewBox="0 0 20 20"><path d="M2 4a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0l6 5 6-5H4zm0 2.236V16h12V6.236l-6 5-6-5z"/></svg>
         avnerkantor@gmail.com
-      </a>
-      <a href="https://avnerkantor.com" target="_blank">
-        <svg viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm6.5 7.5h-2.55a13.6 13.6 0 00-.8-3.9A6.51 6.51 0 0116.5 9.5zm-5 0H8.5a11.9 11.9 0 01.72-3.5 11.9 11.9 0 01.78 3.5zM10 3.56c.42.6.88 1.68 1.18 3.44H8.82C9.12 5.24 9.58 4.16 10 3.56zm-3.15 2.04a13.6 13.6 0 00-.8 3.9H3.5a6.51 6.51 0 013.35-3.9zM3.5 10.5h2.55c.1 1.38.38 2.72.8 3.9A6.51 6.51 0 013.5 10.5zm5 0h3a11.9 11.9 0 01-.78 3.5A11.9 11.9 0 018.5 10.5zm1.5 5.94c-.42-.6-.88-1.68-1.18-3.44h2.36c-.3 1.76-.76 2.84-1.18 3.44zm3.15-2.04c.42-1.18.7-2.52.8-3.9h2.55a6.51 6.51 0 01-3.35 3.9z"/></svg>
-        avnerkantor.com
       </a>
       <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11630928" target="_blank">
         <svg viewBox="0 0 20 20"><path d="M4 3h12a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v10h10V5H5zm2 2h6v1H7V7zm0 3h6v1H7v-1zm0 3h4v1H7v-1z"/></svg>
