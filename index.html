@@ -1,413 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avner Kantor</title>
+<title>Avner Kantor | Computational Social Scientist</title>
+<meta name="author" content="Avner Kantor">
+<meta name="description" content="Dr. Avner Kantor is a computational social scientist studying how information environments shape participation and coordination in online public discourse.">
+<meta name="keywords" content="Avner Kantor, computational social science, online deliberation, information design, data journalism, social network analysis">
+<link rel="canonical" href="https://avnerkantor.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Avner Kantor | Computational Social Scientist">
+<meta property="og:description" content="Computational social scientist studying information environments, online deliberation, and coordination in public discourse.">
+<meta property="og:image" content="https://avnerkantor.com/myPicture2026.jpeg">
+<meta property="og:url" content="https://avnerkantor.com/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --navy:  #14376e;
-    --rule:  #b0bcd8;
-    --text:  #232323;
-    --muted: #5a5a62;
-    --bg:    #fafaf8;
-    --cream: #f3f1ec;
-    --max:   780px;
-    --pad:   2.4rem;
-  }
-  html { scroll-behavior: smooth; font-size: 16px; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'EB Garamond', Georgia, serif;
-    font-size: 1.08rem;
-    line-height: 1.75;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--navy); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* HEADER */
-  header {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 3.2rem var(--pad) 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 2.4rem;
-  }
-  .header-text { flex: 1; }
-  .header-text h1 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2.9rem;
-    font-weight: 300;
-    color: var(--navy);
-    letter-spacing: 0.01em;
-    line-height: 1.1;
-    margin-bottom: 0.35rem;
-  }
-  .header-text .tagline {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.76rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.85rem;
-  }
-  .thesis {
-    font-size: 0.98rem;
-    color: var(--text);
-    line-height: 1.6;
-    margin-bottom: 0.9rem;
-    max-width: 540px;
-  }
-  .contact-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.9rem;
-    align-items: center;
-  }
-  .contact-row a {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.78rem;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-  .contact-row a:hover { color: var(--navy); text-decoration: none; }
-  .contact-row svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
-.cv-btn {
-  display: inline-block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.74rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--navy);
-  background: transparent;
-  border: 1px solid var(--navy);
-  border-radius: 2px;
-  padding: 0.35em 0.9em;
-  transition: background 0.15s, color 0.15s;
-}
-.cv-btn:hover {
-  background: var(--navy);
-  color: #fff;
-  text-decoration: none;
-}
-  .header-photo { flex-shrink: 0; width: 148px; }
-  .header-photo img {
-    width: 148px;
-    height: 148px;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    border: 1px solid var(--rule);
-  }
-
-  /* DIVIDER */
-  .divider { max-width: var(--max); margin: 1.6rem auto 0; padding: 0 var(--pad); }
-  .divider hr { border: none; border-top: 1px solid var(--rule); }
-
-  /* MAIN */
-  main { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad) 4rem; }
-  section { margin-top: 2.2rem; }
-  section h2 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--navy);
-    padding-bottom: 0.45rem;
-    border-bottom: 1px solid var(--rule);
-    margin-bottom: 1.1rem;
-  }
-  section h3 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.70rem;
-    font-weight: 500;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 1.2rem 0 0.6rem;
-  }
-
-  /* ABOUT */
-  .about-text p { font-size: 1.04rem; line-height: 1.8; margin-bottom: 0.9rem; }
-  .about-text p:last-child { margin-bottom: 0; }
-  .position-note {
-    margin-top: 0.8rem;
-    padding: 0.65rem 1rem;
-    border-left: 2px solid var(--rule);
-    font-size: 0.95rem;
-    color: var(--muted);
-    font-style: italic;
-  }
-
-  /* ENTRIES (education / academic positions) */
-  .entry { margin-bottom: 0.9rem; }
-  .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-  .entry-header .inst { font-weight: 600; }
-  .entry-header .year { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--navy); font-weight: 500; white-space: nowrap; }
-  .entry-sub { display: flex; justify-content: space-between; font-style: italic; color: var(--muted); font-size: 0.93rem; }
-  .entry-detail { margin-top: 0.2rem; padding-left: 1rem; font-size: 0.93rem; color: var(--muted); }
-  .entry-detail li { list-style: none; padding-left: 0.8rem; position: relative; }
-  .entry-detail li::before { content: '\2013'; position: absolute; left: 0; color: var(--rule); }
-
-  /* PUB LISTS */
-  .pub-list { list-style: none; }
-  .pub-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--cream); font-size: 1rem; line-height: 1.65; }
-  .pub-list li:last-child { border-bottom: none; }
-  .pub-list .authors { color: var(--muted); }
-  .pub-list .title { font-weight: 600; }
-  .pub-list .venue { font-style: italic; }
-  .pub-list .status {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.72rem;
-    color: var(--navy);
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-  .pill {
-    display: inline-block;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.68rem;
-    font-weight: 500;
-    color: var(--navy);
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    padding: 0 0.4em;
-    margin-left: 0.3em;
-    text-decoration: none;
-    vertical-align: middle;
-    transition: background 0.15s, color 0.15s;
-  }
-  .pill:hover { background: var(--navy); color: #fff; border-color: var(--navy); text-decoration: none; }
-
-  /* CONF LIST */
-  .conf-list { list-style: none; }
-  .conf-list li {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 0.6rem;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--cream);
-    font-size: 0.96rem;
-    line-height: 1.55;
-  }
-  .conf-list li:last-child { border-bottom: none; }
-  .conf-year { font-family: 'DM Sans', sans-serif; font-size: 0.76rem; color: var(--muted); padding-top: 0.15rem; }
-  .conf-title { font-weight: 600; }
-  .conf-venue { color: var(--muted); font-style: italic; font-size: 0.91rem; }
-  .conf-tag {
-    display: inline-block;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.66rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--navy);
-    margin-left: 0.3em;
-    vertical-align: middle;
-  }
-
-  /* TALKS LIST */
-  .talk-list { list-style: none; }
-  .talk-list li {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    gap: 0.6rem;
-    padding: 0.45rem 0;
-    border-bottom: 1px solid var(--cream);
-    font-size: 0.96rem;
-    line-height: 1.5;
-  }
-  .talk-list li:last-child { border-bottom: none; }
-  .talk-year { font-family: 'DM Sans', sans-serif; font-size: 0.76rem; color: var(--muted); padding-top: 0.1rem; }
-  .talk-title { font-weight: 600; }
-  .talk-venue { color: var(--muted); font-style: italic; font-size: 0.91rem; }
-
-  /* EXPERIENCE compact */
-  .exp-list { list-style: none; }
-  .exp-list li {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.2rem 1rem;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--cream);
-    font-size: 0.96rem;
-    line-height: 1.5;
-  }
-  .exp-list li:last-child { border-bottom: none; }
-  .exp-inst { font-weight: 600; }
-  .exp-role { font-style: italic; color: var(--muted); font-size: 0.91rem; }
-  .exp-years { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--navy); white-space: nowrap; text-align: right; }
-  .exp-loc { font-family: 'DM Sans', sans-serif; font-size: 0.76rem; color: var(--muted); text-align: right; }
-
-  /* SKILLS */
-  .skills-row { display: flex; flex-wrap: wrap; gap: 0.5rem 1.8rem; font-size: 0.96rem; }
-  .skills-row span { color: var(--muted); }
-  .skills-row strong { color: var(--text); }
-
-  /* CV NOTE */
-  .cv-note { margin-top: 0.7rem; font-size: 0.9rem; color: var(--muted); }
-
-  /* GRANTS */
-  .grant-list { list-style: none; }
-  .grant-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--cream); font-size: 0.96rem; }
-  .grant-list li:last-child { border-bottom: none; }
-
-  footer { text-align: center; padding: 2rem; font-family: 'DM Sans', sans-serif; font-size: 0.74rem; color: var(--rule); letter-spacing: 0.06em; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  header, .divider, section { animation: fadeUp 0.5s ease both; }
-  .divider { animation-delay: 0.07s; }
-  section:nth-of-type(1)  { animation-delay: 0.11s; }
-  section:nth-of-type(2)  { animation-delay: 0.15s; }
-  section:nth-of-type(3)  { animation-delay: 0.19s; }
-  section:nth-of-type(4)  { animation-delay: 0.23s; }
-  section:nth-of-type(5)  { animation-delay: 0.27s; }
-  section:nth-of-type(6)  { animation-delay: 0.31s; }
-  section:nth-of-type(7)  { animation-delay: 0.35s; }
-  section:nth-of-type(8)  { animation-delay: 0.39s; }
-  section:nth-of-type(9)  { animation-delay: 0.43s; }
-  section:nth-of-type(10) { animation-delay: 0.47s; }
-
-  @media (max-width: 580px) {
-    :root { --pad: 1.2rem; }
-    header { flex-direction: column-reverse; gap: 1rem; }
-    .header-photo { width: 90px; }
-    .header-photo img { width: 90px; height: 90px; }
-    .header-text h1 { font-size: 2.1rem; }
-    .conf-list li, .talk-list li { grid-template-columns: 1fr; }
-    .exp-list li { grid-template-columns: 1fr; }
-    .exp-years, .exp-loc { text-align: left; }
-  }
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <div class="header-text">
-    <h1>Avner Kantor</h1>
-    <p class="tagline">Computational Social Scientist</p>
-    <p class="thesis">I study when and how information environments enable collective engagement in online discourse, combining game-theoretic modeling with large-scale computational analysis.</p>
-    <div class="contact-row">
-      <a href="mailto:avnerkantor@gmail.com">
-        <svg viewBox="0 0 20 20"><path d="M2 4a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0l6 5 6-5H4zm0 2.236V16h12V6.236l-6 5-6-5z"/></svg>
-        avnerkantor@gmail.com
-      </a>
-      <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11630928" target="_blank">
-        <svg viewBox="0 0 20 20"><path d="M4 3h12a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v10h10V5H5zm2 2h6v1H7V7zm0 3h6v1H7v-1zm0 3h4v1H7v-1z"/></svg>
-        SSRN
-      </a>
-      <a href="https://scholar.google.co.il/citations?user=oXJ77UAAAAAJ&hl=en" target="_blank">
-        <svg viewBox="0 0 20 20"><path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 11H9V9h2v4zm0-6H9V5h2v2z"/></svg>
-        Google Scholar
-      </a>
-      <a class="cv-btn" href="cv.pdf" target="_blank">Download CV</a>
-    </div>
-  </div>
-  <div class="header-photo">
-    <img src="myPicture2026.jpeg" alt="Avner Kantor">
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="wordmark" href="index.html">Avner Kantor</a>
+    <nav>
+      <ul class="tabs">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<div class="divider"><hr></div>
+<div class="banner"><img src="banner.svg" alt=""></div>
 
-<main>
+<div class="shell layout">
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About</h2>
-    <div class="about-text">
-      <p>I study how information environments shape who participates in online public discourse and under what conditions coordination happens, combining game theory, causal identification, and computational methods applied to large-scale online news commenting data. My research sits at the intersection of information systems, economics, and computational social science. My primary empirical setting is large-scale online news commenting, where I analyze how journalistic information design influences the coordination dynamics that precede network formation.</p>
-      <p>PhD in Information &amp; Knowledge Management, University of Haifa under the supervision of Prof. Sheizaf Rafaeli. Currently a Statistician at the Central Bureau of Statistics of Israel; incoming Guest Researcher at the Center for the Study of Rationality, Hebrew University of Jerusalem.</p>
-    </div>
-  </section>
-
-  <!-- ACADEMIC POSITIONS -->
-  <section>
-    <h2>Academic Positions</h2>
-    <div class="entry">
-      <div class="entry-header"><span class="inst">Center for the Study of Rationality, Hebrew University of Jerusalem</span><span class="year">Incoming 2026</span></div>
-      <div class="entry-sub"><span>Guest Researcher</span><span>Jerusalem, Israel</span></div>
-    </div>
-    <div class="entry">
-      <div class="entry-header"><span class="inst">Reichman University (IDC Herzliya)</span><span class="year">2021&ndash;2022</span></div>
-      <div class="entry-sub"><span>Adjunct Lecturer, Lauder School of Government</span><span>Herzliya, Israel</span></div>
-      <ul class="entry-detail">
-        <li>Taught &ldquo;Introduction to Data Science with Python for Government.&rdquo;</li>
-      </ul>
-    </div>
-    <div class="entry">
-      <div class="entry-header"><span class="inst">University of Haifa</span><span class="year">2015&ndash;2018</span></div>
-      <div class="entry-sub"><span>Research Fellow, Center for Internet Research</span><span>Haifa, Israel</span></div>
-      <ul class="entry-detail">
-        <li>Designed and launched <em>OpenPISA</em>, an open-data platform for the OECD PISA database.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS -->
-  <section>
-    <h2>Selected Publications</h2>
-    <ul class="pub-list">
-      <li>
-        <span class="authors"><strong>Kantor, A.</strong>, &amp; Rafaeli, S. (2026).</span>
-        <span class="title"> Fewer but More Elaborate: How Information Accessibility Filters Participation and Shapes Online News Comments.</span>
-        <span class="venue"> Journalism Studies,</span> 1&ndash;24.
-        <a class="pill" href="https://doi.org/10.1080/1461670X.2026.2700623">DOI</a>
-      </li>
-      <li>
-        <span class="authors"><strong>Kantor, A.</strong></span>
-        <span class="title"> Information Environments Change How People Engage, Not Just Who Engages.</span>
-        <span class="status"> Working paper</span>
-      </li>
-      <li>
-        <span class="authors"><strong>Kantor, A.</strong></span>
-        <span class="title"> The Narrative Ratchet: Asymmetric Updating of Inflation Beliefs.</span>
-        <span class="status"> Working paper</span>
-      </li>
+  <aside class="profile">
+    <div class="profile-photo"><img src="https://avnerkantor.com/myPicture2026.jpeg" alt="Avner Kantor"></div>
+    <h2>Avner Kantor</h2>
+    <p class="title">Computational Social Scientist</p>
+    <hr>
+    <p class="mail"><a href="mailto:avnerkantor@gmail.com">avnerkantor@gmail.com</a></p>
+    <hr>
+    <p class="affil">Israel Central Bureau of Statistics</p>
+    <hr>
+    <ul>
+      <li><a href="https://scholar.google.co.il/citations?user=oXJ77UAAAAAJ&hl=en"><svg viewBox="0 0 24 24"><path d="M12 2 1 8l11 6 9-4.9V17h2V8L12 2zM4 13.2V17c0 2.2 3.6 4 8 4s8-1.8 8-4v-3.8l-8 4.4-8-4.4z"/></svg>Google Scholar</a></li>
+      <li><a href="https://www.linkedin.com/in/avnerkantor/"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.5 8.75 22 11 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.57-2.33 3.2V21h-4V9z"/></svg>LinkedIn</a></li>
+      <li><a href="https://x.com/avnerkantor"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.1 8.1L23.3 22h-6.6l-5.2-6.8L5.6 22H2.5l7.6-8.7L1.1 2h6.8l4.7 6.2L18.9 2zm-1.1 18h1.7L7.3 3.8H5.5L17.8 20z"/></svg>X (Twitter)</a></li>
+      <li><a href="https://bsky.app/profile/avnerkantor.bsky.social"><svg viewBox="0 0 24 24"><path d="M12 10.4C10.6 7.6 8 5.3 5.6 4c-1 0-2 .3-2 1.7 0 .3.2 2.9.3 3.3.5 1.7 2.2 2.2 3.8 2-2.7.4-5.1 1.5-2 3.1C9.6 15.6 11 12.9 12 10.4c1 2.5 2.4 5.2 6.3 3.7 3.1-1.6.7-2.7-2-3.1 1.6.2 3.3-.3 3.8-2 .1-.4.3-3 .3-3.3C20.4 4.3 19.4 4 18.4 4c-2.4 1.3-5 3.6-6.4 6.4z"/></svg>Bluesky</a></li>
+      <li><a href="https://avnerkantor.com/cv.pdf"><svg viewBox="0 0 24 24"><path d="M12 3v10.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4L10 13.2V3h2zM4 19h16v2H4v-2z"/></svg>Download CV</a></li>
     </ul>
-    <p class="cv-note">Full publication list, conference presentations, and invited talks in the <a href="cv.pdf" target="_blank">CV</a>.</p>
-  </section>
+  </aside>
 
-  <!-- PROFESSIONAL EXPERIENCE -->
-  <section>
-    <h2>Professional Experience</h2>
-    <ul class="exp-list">
-      <li>
-        <div><div class="exp-inst">Central Bureau of Statistics (CBS)</div><div class="exp-role">Statistician</div></div>
-        <div><div class="exp-years">2024&ndash;Present</div><div class="exp-loc">Jerusalem, Israel</div></div>
-      </li>
-      <li>
-        <div><div class="exp-inst">Maccabi Health Services</div><div class="exp-role">Data Scientist</div></div>
-        <div><div class="exp-years">2021&ndash;2024</div><div class="exp-loc">Tel Aviv, Israel</div></div>
-      </li>
-      <li>
-        <div><div class="exp-inst">Corona National Information and Knowledge Center</div><div class="exp-role">Data Scientist</div></div>
-        <div><div class="exp-years">2020&ndash;2021</div><div class="exp-loc">Israel</div></div>
-      </li>
-      <li>
-        <div><div class="exp-inst">Center for Educational Technology (CET)</div><div class="exp-role">Data Scientist</div></div>
-        <div><div class="exp-years">2018&ndash;2020</div><div class="exp-loc">Tel Aviv, Israel</div></div>
-      </li>
-    </ul>
-  </section>
+  <main class="content">
+    <h1>About me</h1>
+    <hr class="title-rule">
 
+    <p class="lead">I study how information environments shape who takes part in online public discourse, how they engage, and when coordination happens.</p>
 
-</main>
+    <p>I am a statistician in the Methodology Department at the Israel Central Bureau of Statistics. I hold a PhD in Information and Knowledge Management from the University of Haifa, supervised by Prof. Sheizaf Rafaeli.</p>
 
-<footer>Avner Kantor &middot; 2026</footer>
+    <p>My current work treats information design as a coordination device. How evidence is presented in a news article changes who chooses to speak, what they say, and how the discussion network forms around them. I combine game-theoretic modeling with causal identification and large-scale computational analysis of online news commenting.</p>
+
+    <p>More on my work in <a href="publications.html">publications</a>. For inquiries or collaborations, feel free to <a href="mailto:avnerkantor@gmail.com">get in touch</a>.</p>
+  </main>
+</div>
+
+<footer>&copy; 2026 Avner Kantor. All rights reserved.</footer>
 </body>
 </html>

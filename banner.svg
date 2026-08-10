@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract geometric artwork">
+  <defs>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F6EEDC"/>
+      <stop offset="100%" stop-color="#EFE3C8"/>
+    </linearGradient>
+    <linearGradient id="pine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1C6B58"/>
+      <stop offset="100%" stop-color="#12463A"/>
+    </linearGradient>
+    <linearGradient id="slate" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2E4A63"/>
+      <stop offset="100%" stop-color="#4C7089"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1600" height="400"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1600" height="400" fill="url(#sand)"/>
+
+    <!-- left mass -->
+    <path d="M0 0 H210 C210 120 150 190 60 250 C20 278 0 320 0 400 Z" fill="url(#pine)" opacity=".92"/>
+    <path d="M0 250 C90 250 170 300 200 400 H0 Z" fill="#C9762F" opacity=".55"/>
+    <circle cx="118" cy="96" r="52" fill="#D8B26A" opacity=".8"/>
+
+    <!-- horizon arcs -->
+    <path d="M300 400 A190 190 0 0 1 680 400" fill="none" stroke="#1C6B58" stroke-width="2" opacity=".65"/>
+    <path d="M360 400 A250 250 0 0 1 860 400" fill="none" stroke="#C9762F" stroke-width="1.5" opacity=".55"/>
+    <path d="M470 400 A130 130 0 0 1 730 400" fill="#E3D6B4" opacity=".85"/>
+
+    <circle cx="392" cy="238" r="26" fill="#2E4A63"/>
+    <circle cx="452" cy="118" r="13" fill="#C9762F"/>
+    <circle cx="700" cy="180" r="42" fill="none" stroke="#2E4A63" stroke-width="1.4" opacity=".75"/>
+
+    <!-- centre triangle -->
+    <path d="M820 400 L960 128 L1100 400 Z" fill="#E7D5A8" opacity=".85"/>
+    <path d="M905 400 L960 288 L1015 400 Z" fill="#D8B26A" opacity=".7"/>
+
+    <!-- thin ruling lines -->
+    <g stroke-width="1.2" opacity=".7">
+      <line x1="240" y1="24" x2="640" y2="300" stroke="#2E4A63"/>
+      <line x1="700" y1="10" x2="700" y2="400" stroke="#1C6B58" opacity=".45"/>
+      <line x1="1180" y1="0" x2="1600" y2="330" stroke="#12463A"/>
+      <line x1="1240" y1="0" x2="1600" y2="290" stroke="#C9762F" opacity=".8"/>
+    </g>
+
+    <!-- large ring, right of centre -->
+    <circle cx="1120" cy="160" r="120" fill="none" stroke="#C9762F" stroke-width="2.2" opacity=".85"/>
+    <circle cx="1120" cy="40" r="9" fill="#1C6B58"/>
+
+    <!-- right composition -->
+    <path d="M1300 400 L1300 210 L1600 60 L1600 400 Z" fill="url(#slate)" opacity=".9"/>
+    <path d="M1420 400 L1600 210 L1600 400 Z" fill="#1C6B58" opacity=".85"/>
+    <rect x="1332" y="252" width="26" height="26" fill="#F6EEDC" opacity=".9"/>
+    <rect x="1358" y="278" width="26" height="26" fill="#F6EEDC" opacity=".9"/>
+    <rect x="1384" y="252" width="26" height="26" fill="#F6EEDC" opacity=".55"/>
+    <circle cx="1520" cy="120" r="46" fill="#C9762F" opacity=".85"/>
+    <path d="M1440 30 L1600 0 L1600 34 L1452 66 Z" fill="#D8B26A" opacity=".75"/>
+
+    <!-- scattered marks -->
+    <g fill="#2E4A63" opacity=".55">
+      <circle cx="560" cy="86" r="5"/>
+      <circle cx="1010" cy="70" r="7"/>
+      <circle cx="880" cy="330" r="4"/>
+    </g>
+    <g stroke="#C9762F" stroke-width="1.1" opacity=".6">
+      <path d="M1180 300 q40 -14 84 0"/>
+      <path d="M1180 318 q40 -14 84 0"/>
+      <path d="M1180 336 q40 -14 84 0"/>
+    </g>
+  </g>
+</svg>
