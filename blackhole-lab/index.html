@@ -280,7 +280,7 @@ const G1={
     runSparks(this.fx,dt);
     if(this.state==='aim'){this.s.a=-this.elev*Math.PI/180;return;}
     if(this.state!=='fly')return;
-    const n=6,h=dt/n,s=this.s;
+    const n=Math.max(6,Math.ceil(dt/.003)),h=dt/n,s=this.s;
     for(let i=0;i<n;i++){
       let ax=0,ay=0;
       for(const b of this.L.holes){const dx=b.x-s.x,dy=b.y-s.y,r2=dx*dx+dy*dy+80,r=Math.sqrt(r2),a=b.gm/r2;ax+=a*dx/r;ay+=a*dy/r;if(r<b.r)return this.end(false,'החללית חצתה את אופק האירועים ונבלעה בחור השחור. נסו עוצמה גבוהה יותר או זווית רחבה יותר.');}
@@ -470,9 +470,9 @@ addEventListener('keyup',e=>cur.key(e,false));
 $('mute').addEventListener('click',e=>{Snd.init();const m=!Snd.muted;Snd.setMuted(m);e.currentTarget.setAttribute('aria-pressed',String(m));e.currentTarget.textContent=m?'🔇 צליל כבוי':'🔊 צליל פועל';});
 document.addEventListener('pointerdown',()=>Snd.init(),{once:true});
 
-let last=performance.now(),hudT=0;
-function frame(now){const dt=Math.min(.033,(now-last)/1000);last=now;const t=now/1000;
-  cur.update(dt);cur.draw(t);hudT+=dt;if(hudT>.1){hudT=0;setHud(cur.hud());}drawSky(t);requestAnimationFrame(frame);}
+let last=performance.now(),hudT=0,skyT=1;
+function frame(now){const dt=Math.min(.1,(now-last)/1000);last=now;const t=now/1000;
+  cur.update(dt);cur.draw(t);hudT+=dt;if(hudT>.1){hudT=0;setHud(cur.hud());}skyT+=dt;if(skyT>.15){skyT=0;drawSky(t);}requestAnimationFrame(frame);}
 setElev(12);setPow(55);G1.reset();setHud(G1.hud());requestAnimationFrame(frame);
 })();
 </script>
