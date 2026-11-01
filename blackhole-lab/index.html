@@ -470,9 +470,13 @@ addEventListener('keyup',e=>cur.key(e,false));
 $('mute').addEventListener('click',e=>{Snd.init();const m=!Snd.muted;Snd.setMuted(m);e.currentTarget.setAttribute('aria-pressed',String(m));e.currentTarget.textContent=m?'🔇 צליל כבוי':'🔊 צליל פועל';});
 document.addEventListener('pointerdown',()=>Snd.init(),{once:true});
 
-let last=performance.now(),hudT=0,skyT=1;
-function frame(now){const dt=Math.min(.1,(now-last)/1000);last=now;const t=now/1000;
-  cur.update(dt);cur.draw(t);hudT+=dt;if(hudT>.1){hudT=0;setHud(cur.hud());}skyT+=dt;if(skyT>.15){skyT=0;drawSky(t);}requestAnimationFrame(frame);}
+let last=performance.now(),hudT=0,skyT=1,lastDraw=0;
+function step(){const now=performance.now();let dt=Math.min(.5,(now-last)/1000);last=now;
+  while(dt>0){const d=Math.min(.04,dt);cur.update(d);dt-=d;}
+  if(now-lastDraw>120)render(now);}
+function render(now){lastDraw=now;const t=now/1000;cur.draw(t);hudT+=1;if(hudT>5){hudT=0;setHud(cur.hud());}if(now-skyT>150){skyT=now;drawSky(t);}}
+function frame(now){render(now);requestAnimationFrame(frame);}
+setInterval(step,16);
 setElev(12);setPow(55);G1.reset();setHud(G1.hud());requestAnimationFrame(frame);
 })();
 </script>
